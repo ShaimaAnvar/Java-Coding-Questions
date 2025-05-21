@@ -1,0 +1,21 @@
+public class CountVowelsAndConsonants {
+    public static void main(String[] args) {
+        String input = "Hello World";
+        int vowels = 0, consonants = 0;
+        // Convert to lowercase to simplify comparison
+        input = input.toLowerCase();
+        for (int i = 0; i < input.length(); i++) {
+            char ch = input.charAt(i);
+            // Check if character is a letter
+            if (Character.isLetter(ch)) {
+                if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+                    vowels++;
+                } else {
+                    consonants++;
+                }
+            }
+        }
+        System.out.println("Vowels: " + vowels);
+        System.out.println("Consonants: " + consonants);
+    }
+}
